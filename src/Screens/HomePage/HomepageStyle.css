@@ -1,3 +1,17 @@
 .HomePageMainContainer{
-    background-color: red;
+    background-color: rgb(235, 146, 29);
+}
+.HomePageContactus{
+    width: 940px;
+    height: 60px;
+}
+.Icons{
+    font-size: 25px;
+    color: #FFFFFF;
+}  
+.ContactusText{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+
 }
