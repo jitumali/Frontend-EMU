@@ -2,7 +2,7 @@ import { Button, Col, Input, Row, Space, Typography } from "antd";
 import React from "react";
 import "./HomePage/HomepageStyle.css";
 import { Controller, useForm } from "react-hook-form";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const Login = () => {
   const {
