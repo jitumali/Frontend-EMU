@@ -3,17 +3,30 @@ import React from "react";
 import "./HomePage/HomepageStyle.css";
 import { Controller, useForm } from "react-hook-form";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginUserAction } from "../Action/authenticationAction";
+import history from "../Utils/history";
 
 const Login = () => {
   const {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm({});
+  const dispatch = useDispatch();
   const onSubmitLoginData = (data) => {
     console.log("onSubmitRegistrationData", { data });
+    dispatch(loginUserAction(data, sucessLoginCallback, failureLoginCallback));
   };
-  console.log({ errors });
+
+  const sucessLoginCallback = (res) => {
+    reset();
+    history.push("/dashbord");
+  };
+  const failureLoginCallback = (res) => {
+    console.log({ res });
+  };
   return (
     <Row className="signupMainContainer" justify="center" align="middle">
       <form onSubmit={handleSubmit(onSubmitLoginData)}>

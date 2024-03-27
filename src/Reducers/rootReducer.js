@@ -1,5 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-const allReducers = combineReducers({});
+import { authendticationReducer } from "./authenticationReducer";
+import { timeFrameDataReducer } from "./timeFrameDataReducer";
+const allReducers = combineReducers({
+  authentication: authendticationReducer,
+  timeFrameData: timeFrameDataReducer,
+});
 
 const rootReducer = (state, action) => {
   if (action.type === "RESET_APP_DATA") {

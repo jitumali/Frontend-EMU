@@ -1,0 +1,55 @@
+.SidebarButtonText,
+.logoName{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+}
+.SidebarSelectedButton{
+    position: relative;
+    cursor: pointer;
+}
+.SidebarSelectedButton:hover{
+    background-color: #000000;
+}
+.SidebarSelectedButton::before{
+    content: "";
+    position: absolute;
+    width: 10px; 
+    height: 100%;
+    background-color: #FFFFFF; 
+}
+.SidebarNonelectedButton{
+    position: relative;
+    cursor: pointer;
+}
+.SidebarNonelectedButton:hover{
+    background-color: #000000;
+}
+.DetailsPagesHeading{
+    font-size: 36px;
+    font-weight: 600;
+}
+.DashboardDetailsButtonText{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px;
+}
+.selecteddashBoardButton,
+.dashBoardButton{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dashBoardButton:hover{
+    background-color: rgb(224, 219, 219);
+}
+.selecteddashBoardButton{
+    background-color: #8A8AFF;
+}
+.categoryText{
+    color: #000075;
+    font-size: 22px;
+    font-weight: 500;
+}
